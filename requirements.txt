@@ -1,0 +1,2 @@
+stupidocr>=1.0.6
+flask
