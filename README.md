@@ -5,7 +5,11 @@ _________________
 快速 便捷 通用的方法提供用户调用，堪称作者开发神器
 ```
 
-
+## Docker
+_________________
+```
+docker run -d --name stupidocr --restart=always -p 6688:6688 yangxiao6/stupidocr:main 
+```
 _________________
 ## 项目说明：
 
