@@ -92,8 +92,8 @@ async def Common_VerificationCode(item: Model_Arithmetic_VerificationCode):
 
 
 class Model_Move_Slider(BaseModel):
-    MovePicture: Union[str, None] = Field(default=None, title="移动滑块Base64编码")
-    Background: Union[str, None] = Field(default=None, title="背景图片Base64编码")
+    MovePicture: Union[str] = Field(title="移动滑块Base64编码")
+    Background: Union[str] = Field(title="背景图片Base64编码")
 
 @app.post("/api.Slider_Move",summary='缺口为滑动的单独图片，返回坐标', description='识别模式1：缺口图片为单独图片', tags=['滑块验证码识别'])
 async def Common_VerificationCode(item: Model_Move_Slider):
@@ -111,13 +111,14 @@ async def Common_VerificationCode(item: Model_Move_Slider):
 
 
 class Model_Comparison_Slider(BaseModel):
-    HaveGap_ImageBase64: Union[str, None] = Field(default=None, title="有缺口图片Base64编码")
-    Full_ImageBase64: Union[str, None] = Field(default=None, title="无缺口背景图片Base64编码")
+    HaveGap_ImageBase64: Union[str] = Field(title="有缺口图片Base64编码")
+    Full_ImageBase64: Union[str] = Field(title="无缺口背景图片Base64编码")
 
 @app.post("/api.Slider_Comparison", summary='缺口原图和完整原图对比识别，无单独滑动的缺口图片，返回坐标', description='识别模型2：一张为有缺口原图，一张为完整原图',tags=['滑块验证码识别'])
-async def Comparison_Slider(item: Model_Move_Slider):
+async def Comparison_Slider(item: Model_Comparison_Slider):
     ocr = ddddocr.DdddOcr(det=False, ocr=False)
     result = ocr.slide_comparison(base64.b64decode(item.HaveGap_ImageBase64), base64.b64decode(item.Full_ImageBase64))
+
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
 
@@ -130,7 +131,7 @@ async def Comparison_Slider(item: Model_Move_Slider):
 
 
 class Model_Text_Choose_Click(BaseModel):
-    ChoiceClick_ImageBase64: Union[str, None] = Field(default=None, title="文字点选验证码图片Base64")
+    ChoiceClick_ImageBase64: Union[str] = Field(title="文字点选验证码图片Base64")
 
 @app.post("/api.Text_Choose_Click", summary='文字选点验证码识别，返回坐标', description='选点识别返回坐标', tags=['选点类验证码识别'])
 async def Text_Choose_Click(item: Model_Text_Choose_Click):
@@ -157,8 +158,8 @@ async def Text_Choose_Click(item: Model_Text_Choose_Click):
 
 
 class Model_ICO_Choose_Click(BaseModel):
-    ICO_ChooseClick_ImageBase64: Union[str, None] = Field(default=None, title="图标Base64编码")
-    Background_ImageBase64: Union[str, None] = Field(default=None, title="背景图片Base64编码")
+    ICO_ChooseClick_ImageBase64: Union[str] = Field( title="图标Base64编码")
+    Background_ImageBase64: Union[str] = Field(title="背景图片Base64编码")
 
 @app.post("/api.Icon_Choose_Click", summary='图标点选验证码，返回坐标', description='点选识别返回坐标', tags=['选点类验证码识别'])
 async def ICO_Choose_Click(item: Model_ICO_Choose_Click):
@@ -176,7 +177,7 @@ async def ICO_Choose_Click(item: Model_ICO_Choose_Click):
 
 
 class Model_Target_Detection(BaseModel):
-    ImageBase64: Union[str, None] = Field(default=None, title="图片Base64编码")
+    ImageBase64: Union[str] = Field(title="图片Base64编码")
 
 @app.post("/api.Target_Detection", summary='扩展功能f，可用返回的坐标截取图片', description='检查图片内的文字 图标，返回坐标', tags=['扩展功能，目标侦察'])
 async def Target_Detection(item:Model_Target_Detection):
