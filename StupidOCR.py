@@ -117,7 +117,7 @@ class Model_Comparison_Slider(BaseModel):
 @app.post("/api.Slider_Comparison", summary='缺口原图和完整原图对比识别，无单独滑动的缺口图片，返回坐标', description='识别模型2：一张为有缺口原图，一张为完整原图',tags=['滑块验证码识别'])
 async def Comparison_Slider(item: Model_Move_Slider):
     ocr = ddddocr.DdddOcr(det=False, ocr=False)
-    result = ocr.slide_comparison(base64.b64decode(item.MovePicture), base64.b64decode(item.Background))
+    result = ocr.slide_comparison(base64.b64decode(item.HaveGap_ImageBase64), base64.b64decode(item.Full_ImageBase64))
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
 
