@@ -1,2 +1,2 @@
-stupidocr>=1.0.6
+stupidocr>=1.0.7
 flask
