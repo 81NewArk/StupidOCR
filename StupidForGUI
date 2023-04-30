@@ -51,7 +51,7 @@ async def identify_GeneralCAPTCHA(request: Request,
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     return {"result": res,
-            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":6688/support"}
+            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
 @api.post("/identify_ArithmeticCAPTCHA", summary='识别算术验证码',
@@ -59,6 +59,8 @@ async def identify_GeneralCAPTCHA(request: Request,
           tags=['图片验证码识别'])
 async def identify_ArithmeticCAPTCHA(request: Request,
                                      ImageBase64: str = Body(..., title='验证码图片Bse64文本', embed=True)):
+    hostname = socket.gethostname()
+    ip = socket.gethostbyname(hostname)
     client_ip = request.client.host
     current_time = datetime.datetime.now().strftime("%H:%M:%S")
     log_text = f"{current_time} : {client_ip} Accessing - WebApi - /identify_ArithmeticCAPTCHA"
@@ -97,13 +99,15 @@ async def identify_ArithmeticCAPTCHA(request: Request,
         return {
             "solution_result": solution,
             "raw_result": res,
-            "BiliBili": "https://space.bilibili.com/37887820"
+            "BiliBili": "https://space.bilibili.com/37887820",
+            "supports": "http://" + ip + ":" + ui.self.text_Port.toPlainText() + "/support"
         }
     except (ValueError, IndexError, base64.binascii.Error):
         return {
             "solution_result": "Error",
             "raw_result": "Error",
-            "BiliBili": "https://space.bilibili.com/37887820"
+            "BiliBili": "https://space.bilibili.com/37887820",
+            "supports": "http://" + ip + ":" + ui.self.text_Port.toPlainText() + "/support"
         }
 
 
@@ -122,7 +126,7 @@ async def SliderMode_AloneGap(request: Request,
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     return {"result": res,
-            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":6688/support"}
+            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
 @api.post("/SliderMode_Comparison", summary='缺口原图和完整原图识别，无单独滑动的缺口图片，返回坐标', description='识别模型2：一张为有缺口原图，一张为完整原图',
@@ -138,7 +142,7 @@ async def SliderMode_Comparison(request: Request,HaveGap_ImageBase64: str = Body
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     return {"result": res,
-            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":6688/support"}
+            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
 @api.post("/ClickChoice_Txt_CAPTCHA", summary='文字点选验证码识别，返回坐标', description='点选识别返回坐标',
@@ -163,7 +167,7 @@ async def ClickChoice_CAPTCHA(request: Request,
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     return {"result": result,
-            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":6688/support"}
+            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
 @api.post("/ClickChoice_Ico_CAPTCHA", summary='图标点选验证码，返回坐标', description='点选识别返回坐标',
@@ -181,7 +185,7 @@ async def ClickChoice_CAPTCHA(request: Request,
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     return {"result": res,
-            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":6688/support"}
+            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
 @api.post("/api.TargetReconnoitre", summary='侦察图片目标',
@@ -236,7 +240,7 @@ async def TargetReconnoitre(request: Request, have_Ico_Image: str = Body(..., ti
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     return {"result": result, "BiliBili": "https://space.bilibili.com/37887820",
-            "supports": "http://" + ip + ":6688/support"}
+            "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
 @api.post("/api.IconReconnaissance", summary='Icon点选',
