@@ -277,7 +277,7 @@ async def IcoReconnaissance(request: Request, Icon_ImageBase64: str = Body(..., 
     ip = socket.gethostbyname(hostname)
 
     return {"result": result,
-            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ui.self.text_Port.toPlainText() + ":6688/support"}
+            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
 @api.get("/support", response_class=HTMLResponse, tags=['赞助StupidOCR'],
