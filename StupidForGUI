@@ -189,7 +189,7 @@ async def ClickChoice_CAPTCHA(request: Request,
 
 
 @api.post("/api.TargetReconnoitre", summary='侦察图片目标',
-          description='上传图片的Base64编码，返回每个目标的xywh和中心点', tags=['Icon点选'])
+          description='上传图片的Base64编码，返回每个目标的xywh和中心点', tags=['Icon侦察'])
 async def TargetReconnoitre(request: Request, have_Ico_Image: str = Body(..., title='图片Base64', embed=True)):
     client_ip = request.client.host
     current_time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -243,8 +243,8 @@ async def TargetReconnoitre(request: Request, have_Ico_Image: str = Body(..., ti
             "supports": "http://" + ip + ":"+ui.self.text_Port.toPlainText()+"/support"}
 
 
-@api.post("/api.IconReconnaissance", summary='Icon点选',
-          description='上传icon图标和背景图标，返回每个目标的xywh和中心点，准确率随缘，等待更新', tags=['Icon点选'])
+@api.post("/api.IconReconnaissance", summary='Icon点选-opencv编写待优化',
+          description='上传icon图标和背景图标，返回每个目标的xywh和中心点，准确率随缘，等待更新', tags=['Icon侦察'])
 async def IcoReconnaissance(request: Request, Icon_ImageBase64: str = Body(..., title='Icon图标Base64', embed=True),
                             BackGround_Base64: str = Body(..., title='背景图片base64', embed=True)):
     client_ip = request.client.host
