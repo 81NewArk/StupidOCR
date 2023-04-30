@@ -13,6 +13,8 @@ import base64
 import ddddocr
 from io import BytesIO
 from PIL import Image
+from PyQt5.QtCore import QUrl
+from PyQt5.QtGui import QDesktopServices
 
 description = """
 _________________
@@ -123,17 +125,14 @@ async def SliderMode_AloneGap(request: Request,
             "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ip + ":6688/support"}
 
 
-@api.post("/SliderMode_Comparison", summary='缺口原图和完整原图识别，无单独滑动的缺口图片，返回坐标',
-          description='识别模型2：一张为有缺口原图，一张为完整原图',
+@api.post("/SliderMode_Comparison", summary='缺口原图和完整原图识别，无单独滑动的缺口图片，返回坐标', description='识别模型2：一张为有缺口原图，一张为完整原图',
           tags=['滑块验证码识别'])
-async def SliderMode_Comparison(request: Request,
-                                HaveGap_ImageBase64: str = Body(..., title='拥有缺口图片的Bse64文本', embed=True),
+async def SliderMode_Comparison(request: Request,HaveGap_ImageBase64: str = Body(..., title='拥有缺口图片的Bse64文本', embed=True),
                                 Full_ImageBase64: str = Body(..., title='完整背景图片的Bse64文本', embed=True)):
     client_ip = request.client.host
     current_time = datetime.datetime.now().strftime("%H:%M:%S")
-    log_text = f"{current_time} : {client_ip} Accessing - WebApi - /SliderMode_Comparison"
+    log_text = f"{current_time} : {client_ip} Accessing - WebApi - /ClickChoice_Txt_CAPTCHA"
     ui.text_Log.appendPlainText(log_text)
-    res = ocr2.detection(base64.b64decode(ClickChoice_ImageBase64))
     ocr = ddddocr.DdddOcr(det=False, ocr=False)
     res = ocr.slide_comparison(base64.b64decode(HaveGap_ImageBase64), base64.b64decode(Full_ImageBase64))
     hostname = socket.gethostname()
@@ -278,7 +277,7 @@ async def IcoReconnaissance(request: Request, Icon_ImageBase64: str = Body(..., 
     ip = socket.gethostbyname(hostname)
 
     return {"result": result,
-            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + self.text_Port.toPlainText() + ":6688/support"}
+            "BiliBili": "https://space.bilibili.com/37887820", "supports": "http://" + ui.self.text_Port.toPlainText() + ":6688/support"}
 
 
 @api.get("/support", response_class=HTMLResponse, tags=['赞助StupidOCR'],
@@ -358,6 +357,10 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.Button_Start.clicked.connect(self.start_button_clicked)
+        self.Button_Stop.clicked.connect(self.stop_button_clicked)
+        self.pushButton.clicked.connect(self.button_clicked)
+        self.pushButton_2.clicked.connect(self.button_2_clicked)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -377,10 +380,21 @@ class Ui_MainWindow(object):
         log_text = f"{current_time} StupidOCR - 停止服务\n"
         self.text_Log.appendPlainText(log_text)
         self.Button_Start.setEnabled(True)
-        # Stop the FastAPI server
         config = uvicorn.Config(api)
         # 停止服务器
         uvicorn.Server(config).stop()
+
+    def button_clicked(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        url = QUrl("http://"+ip+":"+self.text_Port.toPlainText()+"/docs")
+        QDesktopServices.openUrl(url)
+
+    def button_2_clicked(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
+        url = QUrl("http://" + ip + ":" + self.text_Port.toPlainText() + "/support")
+        QDesktopServices.openUrl(url)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
