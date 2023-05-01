@@ -373,7 +373,7 @@ class Ui_MainWindow(object):
     def start_button_clicked(self):
         ip = self.text_IPAddress.toPlainText()
         port = int(self.text_Port.toPlainText())
-        threading.Thread(target=uvicorn.run, args=(api,), kwargs={"host": ip, "port": port}).start()
+        threading.Thread(target=uvicorn.run, args=(api,), kwargs={"host": ip, "port": port, "reload": False}).start()
         current_time = datetime.datetime.now().strftime("%H:%M:%S")
         log_text = f"{current_time} StupidOCR - 服务已开启，IP地址：{ip}，端口：{port}\n"
         self.text_Log.appendPlainText(log_text)
