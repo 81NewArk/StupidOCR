@@ -218,7 +218,7 @@ class Ui_MainWindow(object):
                 for box in res:
                     x1, y1, x2, y2 = box
 
-                    result[ocr1.classification(img.crop(box))] = [x1 + ((y1 - x1) // 2), x2 + ((y2 - x2) // 2)]  # 文字位置
+                    result[ocr1.classification(img.crop(box))] = [ x1+(x2-x1)//2，y1+(y2-y1)//2]  # 文字位置
             hostname = socket.gethostname()
             ip = socket.gethostbyname(hostname)
             return {"result": result,
