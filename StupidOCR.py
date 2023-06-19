@@ -146,7 +146,7 @@ async def Text_Choose_Click(item: Model_Text_Choose_Click):
     result = {}
     for box in res:
         x1, y1, x2, y2 = box
-        result[ocr1.classification(img.crop(box))] = [x1 + ((y1 - x1) // 2), x2 + ((y2 - x2) // 2)]  # 文字位置
+        result[ocr1.classification(img.crop(box))] = [ x1+(x2-x1)//2，y1+(y2-y1)//2]  # 文字位置
     return{"result":result,"BiliBili":"https://space.bilibili.com/37887820","supports":"http://"+ip+":6688/support"}
 
 
