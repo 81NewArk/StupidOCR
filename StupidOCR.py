@@ -112,7 +112,6 @@ if __name__ == '__main__':
                            |_|                                           
 
                    开发文档：http://localhost:6688/docs
-                   赞助页面：http://127.0.0.1:6688/support
 
                    代码编写：81NewArk
 
