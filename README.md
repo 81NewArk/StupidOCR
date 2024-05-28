@@ -49,9 +49,7 @@ _________________
 > 
 > 补齐所缺DLL(项目用Python3.9环境 + Pyinstaller编译，部分win7服务器不能运行，提供源码自行编译)
 >
->>3.服务器运行秒退？
-> 
-> 参考文章：https://blog.csdn.net/Vickie_Liang/article/details/106538355
+
 _________________
 
 
