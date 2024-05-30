@@ -6,8 +6,10 @@ from PIL import Image
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import FileResponse
+from starlette.staticfiles import StaticFiles
 
-description ="""
+description = """
 * 增强版DDDDOCR
 
 * 识别效果完全靠玄学，可能可以识别，可能不能识别。——DDDDOCR
@@ -17,6 +19,7 @@ description ="""
 
 
 app = FastAPI(title="StupidOCR", description=description, version="1.0.8")
+app.mount("/assets", StaticFiles(directory="dist/assets"), name="assets")
 
 app.add_middleware(
     CORSMiddleware,
@@ -34,7 +37,7 @@ compute_ocr.set_ranges("0123456789+-x÷=")
 alphabet_ocr = ddddocr.DdddOcr(show_ad=False, beta=True)
 alphabet_ocr.set_ranges(3)
 det = ddddocr.DdddOcr(det=True, beta=True, show_ad=False)
-shadow_slide = ddddocr.DdddOcr(det=False, ocr=False,show_ad=False,)
+shadow_slide = ddddocr.DdddOcr(det=False, ocr=False,show_ad=False,beta=True)
 
 class ModelImageIn(BaseModel):
     img_base64: str
@@ -43,6 +46,12 @@ class ModelSliderImageIn(BaseModel):
     gapimg_base64: str
     fullimg_base64: str
 
+
+
+
+@app.get("/",summary="index.html",tags=["主页"])
+async def read_root():
+    return FileResponse("dist/index.html")
 
 
 @app.post("/api/ocr/image", summary="通用", tags=["验证码识别"])
@@ -103,17 +112,20 @@ if __name__ == '__main__':
     print('''
 
       _____   _                     _       _    ____     _____   _____  
-     / ____| | |                   (_)     | |  / __ \   / ____| |  __ \ 
+     / ____| | |                   (_)     | |  / __ \   / ____| |  __  \ 
     | (___   | |_   _   _   _ __    _    __| | | |  | | | |      | |__) |
      \___ \  | __| | | | | | '_ \  | |  / _` | | |  | | | |      |  _  / 
-     ____) | | |_  | |_| | | |_) | | | | (_| | | |__| | | |____  | | \ \ 
+     ____) | | |_  | |_| | | |_) | | | | (_| | | |__| | | |____  | | \  \ 
     |_____/   \__|  \__,_| | .__/  |_|  \__,_|  \____/   \_____| |_|  \_/
                            | |                                           
                            |_|                                           
 
-                   开发文档：http://localhost:6688/docs
 
-                   代码编写：81NewArk
+                    软件主页：http://127.0.0.1:6688
+                    开发文档：http://localhost:6688/docs
+                   
+
+                    代码编写：81NewArk
 
        ''')
 
