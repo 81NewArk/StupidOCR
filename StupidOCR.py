@@ -15,6 +15,10 @@ description = """
 * 识别效果完全靠玄学，可能可以识别，可能不能识别。——DDDDOCR
 
   <img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/StupidOCR"><img src="https://img.shields.io/github/stars/81NewArk/StupidOCR?style=social">
+  
+* ⚡Visitor Count
+
+<img src="https://profile-counter.glitch.me/81NewArk-StupidOCR/count.svg">
 """
 
 
