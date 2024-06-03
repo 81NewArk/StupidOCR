@@ -30,7 +30,7 @@
 
 <p align="center">
 <a href="https://github.com/81NewArk"><img src="https://img.shields.io/badge/GitHub-81NewArk-blue?logo=github" /></a>
-<a href="https://space.bilibili.com/37887820"><img src="https://img.shields.io/badge/哔哩哔哩-NekArk81-pink?logo=bilibili" /></a>
+<a href="https://space.bilibili.com/37887820"><img src="https://img.shields.io/badge/BiliBili-NekArk81-pink?logo=bilibili" /></a>
 <img src="https://img.shields.io/badge/QQ-751247667-green?logo=tencentqq" />
 </p>
 
