@@ -23,9 +23,10 @@
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=81NewArk&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
 
 <br/>
+<p align="center">
 <img align="center" src="https://skillicons.dev/icons?i=py,c,cpp,cs,java,html,css,js,ts,md,&theme=light" />
-
-
+</p>
+<br/>
 
 <p align="center">
 <a href="https://github.com/81NewArk"><img src="https://img.shields.io/badge/GitHub-81NewArk-blue?logo=github" /></a>
