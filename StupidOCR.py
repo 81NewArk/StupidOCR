@@ -16,7 +16,7 @@ description = """
 
   <img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/StupidOCR"><img src="https://img.shields.io/github/stars/81NewArk/StupidOCR?style=social">
   
-* ⚡Visitor Count
+<h2>Visitor Count</h2>
 
 <img src="https://profile-counter.glitch.me/81NewArk-StupidOCR/count.svg">
 """
@@ -40,8 +40,8 @@ compute_ocr = ddddocr.DdddOcr(show_ad=False, beta=True)
 compute_ocr.set_ranges("0123456789+-x÷=")
 alphabet_ocr = ddddocr.DdddOcr(show_ad=False, beta=True)
 alphabet_ocr.set_ranges(3)
-det = ddddocr.DdddOcr(det=True, beta=True, show_ad=False)
-shadow_slide = ddddocr.DdddOcr(det=False, ocr=False,show_ad=False,beta=True)
+det = ddddocr.DdddOcr(det=True,show_ad=False)
+shadow_slide = ddddocr.DdddOcr(det=False, ocr=False,show_ad=False)
 
 class ModelImageIn(BaseModel):
     img_base64: str
