@@ -5,14 +5,14 @@
 
 <p align="center">
 <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=25&pause=1000&center=true&vCenter=true&random=false&width=600&lines=I+am+First+Deep+Love!;Next+Girl+Will+be+Better!" />
-
 </p>
 
 <p align="center">
 <img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=81NewArk&theme=transparent&show_icons=true&hide_border=true&show=reviews&hide_title=true&hide=contribs" />
-
+<br/>
 <img align="center" width="400" src="https://streak-stats.demolab.com/?user=81NewArk&theme=transparent&date_format=%5BY.%5Dn.j&hide_border=true" />
 </p>
+
 <br/>
 
 <img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=81NewArk&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Graph" />
