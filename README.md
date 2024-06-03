@@ -67,5 +67,5 @@ _________________
 ![](https://raw.githubusercontent.com/81NewArk/SD_install4CN/main/images/WeChat.png)     ![](https://raw.githubusercontent.com/81NewArk/SD_install4CN/main/images/ZFB.png)
 
 # Visitor Count
-![](https://badges.pufler.dev/visits/81NewArk/81NewArk)
+![](https://badges.pufler.dev/visits/81NewArk/StupidOCR)
 
