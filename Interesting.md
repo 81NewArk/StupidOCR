@@ -24,7 +24,7 @@
 </p>
 <br/>
 <p align="center">
-<img align="center" src="https://skillicons.dev/icons?i=py,c,cpp,cs,java,html,css,js,ts,md,&theme=light" />
+<img align="center" src="https://skillicons.dev/icons?i=py,c,cpp,cs,java,html,css,js,ts,md,vue,&theme=light" />
 </p>
 <br/>
 
