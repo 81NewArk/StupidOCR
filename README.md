@@ -65,3 +65,7 @@ _________________
 # 在线要饭
 
 ![](https://raw.githubusercontent.com/81NewArk/SD_install4CN/main/images/WeChat.png)     ![](https://raw.githubusercontent.com/81NewArk/SD_install4CN/main/images/ZFB.png)
+
+# Visitor Count
+![](https://profile-counter.glitch.me/81NewArk-StupidOCR/count.svg)
+
