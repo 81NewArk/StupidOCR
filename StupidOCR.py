@@ -14,7 +14,7 @@ description = """
 
 * 识别效果完全靠玄学，可能可以识别，可能不能识别。——DDDDOCR
 
-  <img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/StupidOCR"><img src="https://img.shields.io/github/stars/81NewArk/StupidOCR?style=social">
+  <img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/StupidOCR"> <img src="https://img.shields.io/github/stars/81NewArk/StupidOCR?style=social"> <img src="https://badges.pufler.dev/visits/81NewArk/StupidOCR">
 """
 
 
@@ -36,8 +36,8 @@ compute_ocr = ddddocr.DdddOcr(show_ad=False, beta=True)
 compute_ocr.set_ranges("0123456789+-x÷=")
 alphabet_ocr = ddddocr.DdddOcr(show_ad=False, beta=True)
 alphabet_ocr.set_ranges(3)
-det = ddddocr.DdddOcr(det=True, beta=True, show_ad=False)
-shadow_slide = ddddocr.DdddOcr(det=False, ocr=False,show_ad=False,beta=True)
+det = ddddocr.DdddOcr(det=True,show_ad=False)
+shadow_slide = ddddocr.DdddOcr(det=False, ocr=False,show_ad=False)
 
 class ModelImageIn(BaseModel):
     img_base64: str
@@ -45,6 +45,8 @@ class ModelImageIn(BaseModel):
 class ModelSliderImageIn(BaseModel):
     gapimg_base64: str
     fullimg_base64: str
+
+
 
 
 
