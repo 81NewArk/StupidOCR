@@ -14,11 +14,7 @@ description = """
 
 * 识别效果完全靠玄学，可能可以识别，可能不能识别。——DDDDOCR
 
-  <img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/StupidOCR"><img src="https://img.shields.io/github/stars/81NewArk/StupidOCR?style=social">
-  
-<h2>Visitor Count</h2>
-
-<img src="https://profile-counter.glitch.me/81NewArk-StupidOCR/count.svg">
+  <img src="https://img.shields.io/badge/GitHub-ffffff"></a> <a href="https://github.com/81NewArk/StupidOCR"> <img src="https://img.shields.io/github/stars/81NewArk/StupidOCR?style=social"> <img src="https://badges.pufler.dev/visits/81NewArk/StupidOCR">
 """
 
 
@@ -49,6 +45,8 @@ class ModelImageIn(BaseModel):
 class ModelSliderImageIn(BaseModel):
     gapimg_base64: str
     fullimg_base64: str
+
+
 
 
 
