@@ -1,120 +1,170 @@
-
 <!DOCTYPE html>
-<html class="noIE" lang="zh-CN">
-	<head>
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-			<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
-		<title>用心不一定有回应，用力一定有</title>
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/ionicons.min.css">
-		<link rel="stylesheet" href="assets/css/owl.carousel.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.css">
-	    <link rel="stylesheet" href="assets/css/main.css">
-	    <link rel="stylesheet" href="assets/css/section.css">
-	    <link rel="stylesheet" href="assets/css/about.css">
-        <link rel="icon" href="assets/images/logo.svg">
-	</head>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用心不一定有回应，用力一定有</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="icon" href="assets/logo.svg">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0ef3b2;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            font-size: 0.9rem;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+    </style>
+</head>
+
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">StupidOCR</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/81NewArk/StupidOCR" target="_blank">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://space.bilibili.com/37887820" target="_blank">Bilibili</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/docs">Api文档</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-	<section class="portfolio-header" id="header">
-		
-		<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">StupidOCR</a>
-				</div>
+    <main class="container py-4">
+        <section class="testimonial">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Fastapi封装，高效便捷。</h5>
+                            <p class="card-text">极速的服务启动 🚀</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">基于DDDDOCR</h5>
+                            <p class="card-text">多种验证码识别。 😎</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="">主页</a></li>
-						<li ><a href="https://github.com/81NewArk/StupidOCR" target="_blank">GitHub</a></li>
-						<li><a href="https://space.bilibili.com/37887820" target="_blank">Bilibili</a></li>
-						<li><a href="/docs">Api文档</a></li>
-					</ul>
-			    </div>
-		  	</div>
-		</nav>
-	</section>
+        <section class="add text-center">
+            <h2>体验极速的OCR服务</h2>
+            <p>使用 StupidOCR，快速、准确地识别各种验证码！</p>
+            <a href="/docs" class="btn btn-primary btn-lg">立即使用</a>
+        </section>
+    </main>
 
+    <footer class="text-center">
+        <div class="container">
+            <p>Code By NewArk81</p>
+        </div>
+    </footer>
 
-
-
-
-
-	<section class="testimonial">
-		<div class="container section-wrapper">
-			<div class="section-title">
-				NewArk81
-			</div>
-			<div class="underline white"></div>
-			<div class="owl-carousel testimonial-owl">
-				<div class="item">
-					<p class="testimonial-detail">
-						极速的服务启动 
-					</p>
-					<div class="test-name">
-						<strong>Fastapi封装，高效便捷。</strong> <br>
-						🤡
-					</div>
-				</div>
-				<div class="item">
-					<p class="testimonial-detail">
-						多种验证码识别。
-					</p>
-					<div class="test-name">
-						<strong>基于DDDDOCR</strong> <br>
-						😀
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<section class="section-wrapper add container">
-			<div class="section-title">
-				项目支持
-			</div>
-		<div class="owl-carousel add-owl">
-			<div class="item">
-				<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxwYXRoIGZpbGw9IiM0MWI4ODMiIGQ9Ik0yNC40IDMuOTI1SDMwbC0xNCAyNC4xNUwyIDMuOTI1aDEwLjcxbDMuMjkgNS42bDMuMjItNS42WiIvPjxwYXRoIGZpbGw9IiM0MWI4ODMiIGQ9Im0yIDMuOTI1bDE0IDI0LjE1bDE0LTI0LjE1aC01LjZMMTYgMTguNDE1TDcuNTMgMy45MjVaIi8+PHBhdGggZmlsbD0iIzM1NDk1ZSIgZD0iTTcuNTMgMy45MjVMMTYgMTguNDg1bDguNC0xNC41NmgtNS4xOEwxNiA5LjUyNWwtMy4yOS01LjZaIi8+PC9zdmc+" alt="add" class="add-item">
-			</div>
-				<div class="item">
-					<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjAxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjU2IDI1NSI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJsb2dvc1B5dGhvbjAiIHgxPSIxMi45NTklIiB4Mj0iNzkuNjM5JSIgeTE9IjEyLjAzOSUiIHkyPSI3OC4yMDElIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMzg3ZWI4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzY2OTk0Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImxvZ29zUHl0aG9uMSIgeDE9IjE5LjEyOCUiIHgyPSI5MC43NDIlIiB5MT0iMjAuNTc5JSIgeTI9Ijg4LjQyOSUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmUwNTIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmMzMzEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBmaWxsPSJ1cmwoI2xvZ29zUHl0aG9uMCkiIGQ9Ik0xMjYuOTE2LjA3MmMtNjQuODMyIDAtNjAuNzg0IDI4LjExNS02MC43ODQgMjguMTE1bC4wNzIgMjkuMTI4aDYxLjg2OHY4Ljc0NUg0MS42MzFTLjE0NSA2MS4zNTUuMTQ1IDEyNi43N2MwIDY1LjQxNyAzNi4yMSA2My4wOTcgMzYuMjEgNjMuMDk3aDIxLjYxdi0zMC4zNTZzLTEuMTY1LTM2LjIxIDM1LjYzMi0zNi4yMWg2MS4zNjJzMzQuNDc1LjU1NyAzNC40NzUtMzMuMzE5VjMzLjk3UzE5NC42Ny4wNzIgMTI2LjkxNi4wNzJNOTIuODAyIDE5LjY2YTExLjEyIDExLjEyIDAgMCAxIDExLjEzIDExLjEzYTExLjEyIDExLjEyIDAgMCAxLTExLjEzIDExLjEzYTExLjEyIDExLjEyIDAgMCAxLTExLjEzLTExLjEzYTExLjEyIDExLjEyIDAgMCAxIDExLjEzLTExLjEzIi8+PHBhdGggZmlsbD0idXJsKCNsb2dvc1B5dGhvbjEpIiBkPSJNMTI4Ljc1NyAyNTQuMTI2YzY0LjgzMiAwIDYwLjc4NC0yOC4xMTUgNjAuNzg0LTI4LjExNWwtLjA3Mi0yOS4xMjdIMTI3LjZ2LTguNzQ1aDg2LjQ0MXM0MS40ODYgNC43MDUgNDEuNDg2LTYwLjcxMmMwLTY1LjQxNi0zNi4yMS02My4wOTYtMzYuMjEtNjMuMDk2aC0yMS42MXYzMC4zNTVzMS4xNjUgMzYuMjEtMzUuNjMyIDM2LjIxaC02MS4zNjJzLTM0LjQ3NS0uNTU3LTM0LjQ3NSAzMy4zMnY1Ni4wMTNzLTUuMjM1IDMzLjg5NyA2Mi41MTggMzMuODk3bTM0LjExNC0xOS41ODZhMTEuMTIgMTEuMTIgMCAwIDEtMTEuMTMtMTEuMTNhMTEuMTIgMTEuMTIgMCAwIDEgMTEuMTMtMTEuMTMxYTExLjEyIDExLjEyIDAgMCAxIDExLjEzIDExLjEzYTExLjEyIDExLjEyIDAgMCAxLTExLjEzIDExLjEzIi8+PC9zdmc+" alt="add" class="add-item">
-				</div>
-				<div class="item">
-					<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTI4IDEyOCI+PHBhdGggZmlsbD0iIzA0OTY4OCIgZD0iTTU2LjgxMyAxMjcuNTg2Yy0xLjkwMy0uMjI3LTMuODk5LS41Mi00LjQzNC0uNjUyYTQ4IDQ4IDAgMCAwLTIuMzc1LS41YTM2IDM2IDAgMCAxLTIuNzAzLS42MzNjLTQuMTQ1LTEuMTg4LTQuNDQyLTEuMjg1LTcuNTY3LTIuNTYzYy0yLjg3NS0xLjE3Mi04LjE3Mi0zLjkxLTkuOTg0LTUuMTU2Yy0uNDk2LS4zNDQtLjk2LS42MjEtMS4wMzEtLjYyMXMtMS4yMy0uODE2LTIuNTc4LTEuODEzYy04LjU3LTYuMzQzLTE1LjAwNC0xNC4wNDMtMTkuNjUzLTIzLjUyN2MtLjgtMS42MjktMS40NTMtMy4wNzQtMS40NTMtMy4yMWMwLS4xMzQtLjE0NC0uNTA1LS4zMi0uODE3Yy0uMzYzLS42NDktLjg4LTIuMDQ3LTEuMjk3LTMuNDkyYTIwIDIwIDAgMCAwLS42MjUtMS44MTNjLS4xOTUtLjQ2LS4zNTItMS4wMi0uMzUyLTEuMjQ2YzAtLjIyNy0uMTk1LS45NjUtLjQzMy0xLjY0NWMtLjIzOC0uNjc1LS40My0xLjQ3Mi0uNDMtMS43N2MwLS4yOTYtLjE4Ny0xLjMyLS40MTgtMi4yNzZDLjU5OCA3My40OTIgMCA2Ny4zNzkgMCA2My45NTNjMC0zLjQyMi41OTgtOS41MzUgMS4xNi0xMS44OTRjLjIzLS45NTcuNDE4LTIgLjQxOC0yLjMyYzAtLjMyMS4xNDUtLjk1LjMyLTEuNGMuMTgtLjQ0OC40MS0xLjI1My41MTYtMS43ODhjLjExLS41MzUuMzYtMS40NTcuNTYzLTIuMDU1bC41OS0xLjcyNmMuNDMzLTEuMjkzLjgzNS0yLjM4NyAxLjAyNy0yLjgxM2MuMTEtLjIzOC41MzktMS4yMS45NTctMi4xNmMuNjc2LTEuNTM1IDIuMTI1LTQuNDMgMi45NzItNS45NDVjLjMwOS0uNTU1LjQyNi0uNzM5IDIuMDk4LTMuMzUyYzIuNjQ5LTQuMTQ4IDcuMTc2LTkuMzA5IDExLjM5LTEyLjk4OGMxLjQ4NS0xLjI5NyA2LjQ0Ni01LjA2MyA2LjY2OS01LjA2M2MuMDYyIDAgLjUzLS4yODEgMS4wNDMtLjYyNWMxLjM0Ny0uOTAyIDIuNjY4LTEuNjY4IDQuMzktMi41MzFhNTMgNTMgMCAwIDAgMS44MzYtLjk1M2MuMjg1LS4xNjQuODItLjQxIDMuNTY3LTEuNjRjLjYwNS0uMjcgMS4yNTctLjUxNiAzLjEzNi0xLjE3M2MuNDE0LS4xNDQgMS4yNDYtLjQ0OSAxLjg0LS42NzJjLjU5OC0uMjIyIDEuMzAxLS40MDYgMS41NjMtLjQwNmMuMjU4IDAgLjkzNy0uMTggMS41MDgtLjQwMmMuNTctLjIyMyAxLjYwNS0uNDc3IDIuMzA0LS41NjNjLjY5Ni0uMDgyIDEuNjIxLS4yNzcgMi4wNTUtLjQzYy40My0uMTQ4IDEuNjEtLjM0IDIuNjIxLS40MjVhNzMgNzMgMCAwIDAgMy45NDEtLjQ2NWMyLjY4OC0uMzk0IDguNTMyLS4zOTQgMTEuMTkyIDBhNzUgNzUgMCAwIDAgMy43ODEuNDQ1Yy45NTMuMDc5IDIuMTY4LjI3OCAyLjcwMy40NDJjLjUzNS4xNiAxLjQ2MS4zNiAyLjA1NS40MzNjLjU5NC4wNzkgMS41OTQuMzI1IDIuMjIyLjU1MWMuNjMuMjMgMS4zNDQuNDE0IDEuNTkuNDE0cy43NTQuMTM3IDEuMTI1LjMwOWMuMzc1LjE2OCAxLjE2OC40NDkgMS43NjYuNjI1Yy41OTQuMTggMS42MTMuNTM1IDIuMjcuNzk3Yy42NTIuMjYxIDEuNTI3LjYwNSAxLjk0NS43NjFjLjc3LjI5IDYuNDYgMy4xMzcgNy4yMzQgMy42MjJjNi4yODEgMy45MTcgOS41MTIgNi40NzYgMTMuODU2IDEwLjk2NGM1LjIzOCA1LjQxNCA4LjcxNSAxMC41NyAxMi4yNTQgMTguMTZjLjI1LjUzNi42MzIgMS4zMjkuODUxIDEuNzU4Yy4yMTUuNDM0LjM5NS45NDIuMzk1IDEuMTNjMCAuMTkuMTguNzYuNDAyIDEuMjY5Yy42MDIgMS4zODMgMS4xMTcgMi45NTcgMS4zNiA0LjE2Yy4xMi41OS4zNDMgMS4zMi40OTUgMS42MjFjLjE1My4zLjMzMiAxLjA2My40MDMgMS42ODhjLjA3LjYyNC4yNzcgMS42NDguNDUzIDIuMjY5YzEuMDIgMy41MzEgMS41MjcgMTMuOTM0LjkxIDE4LjUzNWMtLjE4MyAxLjM2Ny0uMzkgMy4wMi0uNDYgMy42NzJjLS4xMTggMS4xMTctLjcwOCA0LjAwNC0xLjIxMiA1Ljk0NWwtLjUyIDIuMDU1Yy0uOTggMy45NTctMy40MDIgOS41OTQtNi4zNTkgMTQuODA5Yy0xLjE3MiAyLjA3LTUuMTAxIDcuNjY4LTUuODQzIDguMzI0Yy0uMDY3LjA1OC0uMzk5LjQ1LS43MzUuODYzYy0uMzM2LjQxOC0xLjQxNCAxLjU4Ni0yLjM5IDIuNTk0Yy00LjMwMSA0LjQ0MS03Ljc3IDcuMTg3LTEzLjg2IDEwLjk2OWMtLjcyMi40NDktNi44NDcgMy40NDEtNy45OTIgMy45MDZjLS41OTQuMjM4LTEuNTg2LjY0LTIuMjAzLjg5Yy0uNjEzLjI0Ny0xLjI5Ny40NTQtMS41MTIuNDU4Yy0uMjE1LjAwMy0uNzgxLjE5NS0xLjI1OC40MjVjLS40NzYuMjMtMS4wODIuNDIyLTEuMzUxLjQyNmMtLjI2Ni4wMDQtMS4wNDMuMTkyLTEuNzI3LjQxOGMtLjY4My4yMy0xLjYzMy40NzctMi4xMS41NWMtLjQ3Ni4wNzUtMS40OTUuMjc4LTIuMjY5LjQ1Yy0uNzczLjE3Mi0zLjExLjUwOC01LjE4Ny43NDZhNTkgNTkgMCAwIDEtMTMuOTQ1LS4wMzFtNC43MDMtMTIuNWMuMy0uMjM0LjYwOS0uNy42OTEtMS4wMjdjLjE4LS43MjMgMjkuMjM0LTU4Ljk3IDI5Ljc4MS01OS43Yy40NjEtLjYxNy41MDQtMS42MDUuMDgyLTEuOTUzYy0uMjIyLS4xODctMy4wMDQtLjI0Ni0xMC40My0uMjM0Yy01LjU3LjAxMi0xMC4yNTMuMDE2LTEwLjQwNi4wMTJjLS4yMjYtLjAwOC0uMjczLTMuNzMtLjI1LTE5LjY3MmMuMDE2LTEwLjgxNy0uMDM1LTE5Ljc2Ni0uMTEzLTE5Ljg5Yy0uMDc4LS4xMjYtLjM4My0uMjI3LS42OC0uMjI3Yy0uNDE4IDAtLjYxMy4xOC0uODcuODA4Yy0uNDg1IDEuMTY4LTEuODI1IDMuODItOC4zNDggMTYuNDg1YTM1NTUgMzU1NSAwIDAgMC00LjA1NSA3Ljg5Yy0xLjE1NiAyLjI2Mi0yLjk4IDUuODEzLTQuMDQ3IDcuODlhODc1MSA4NzUxIDAgMCAwLTguNTk4IDE2Ljc1OWMtNC45MzMgOS42MzYtNS41MyAxMC43ODUtNS43NDIgMTEuMDM5Yy0uNDEuNDk2LS42MzMgMS42NC0uNDAyIDIuMDdjLjIxLjM5NC42MjkuNDEgMTEuMDQzLjM5NGM1Ljk1My0uMDA3IDEwLjg2My4wMjQgMTAuOTE0LjA3Yy4xMzcuMTQxLjA4NiAzNy4zMS0uMDU1IDM4LjE5NmMtLjA5My41ODItLjAzMS44OS4yMzUgMS4xNTZjLjQ2LjQ2MS41ODYuNDU3IDEuMjUtLjA2Nm0wIDAiLz48L3N2Zz4=" alt="add" class="add-item">
-				</div>
-				<div class="item">
-					<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjU2IDI1NyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJsb2dvc1ZpdGVqczAiIHgxPSItLjgyOCUiIHgyPSI1Ny42MzYlIiB5MT0iNy42NTIlIiB5Mj0iNzguNDExJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQxZDFmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JkMzRmZSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsb2dvc1ZpdGVqczEiIHgxPSI0My4zNzYlIiB4Mj0iNTAuMzE2JSIgeTE9IjIuMjQyJSIgeTI9Ijg5LjAzJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZWE4MyIvPjxzdG9wIG9mZnNldD0iOC4zMzMlIiBzdG9wLWNvbG9yPSIjZmZkZDM1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZhODAwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZmlsbD0idXJsKCNsb2dvc1ZpdGVqczApIiBkPSJNMjU1LjE1MyAzNy45MzhMMTM0Ljg5NyAyNTIuOTc2Yy0yLjQ4MyA0LjQ0LTguODYyIDQuNDY2LTExLjM4Mi4wNDhMLjg3NSAzNy45NThjLTIuNzQ2LTQuODE0IDEuMzcxLTEwLjY0NiA2LjgyNy05LjY3bDEyMC4zODUgMjEuNTE3YTYuNTM3IDYuNTM3IDAgMCAwIDIuMzIyLS4wMDRsMTE3Ljg2Ny0yMS40ODNjNS40MzgtLjk5MSA5LjU3NCA0Ljc5NiA2Ljg3NyA5LjYyIi8+PHBhdGggZmlsbD0idXJsKCNsb2dvc1ZpdGVqczEpIiBkPSJNMTg1LjQzMi4wNjNMOTYuNDQgMTcuNTAxYTMuMjY4IDMuMjY4IDAgMCAwLTIuNjM0IDMuMDE0bC01LjQ3NCA5Mi40NTZhMy4yNjggMy4yNjggMCAwIDAgMy45OTcgMy4zNzhsMjQuNzc3LTUuNzE4YzIuMzE4LS41MzUgNC40MTMgMS41MDcgMy45MzYgMy44MzhsLTcuMzYxIDM2LjA0N2MtLjQ5NSAyLjQyNiAxLjc4MiA0LjUgNC4xNTEgMy43OGwxNS4zMDQtNC42NDljMi4zNzItLjcyIDQuNjUyIDEuMzYgNC4xNSAzLjc4OGwtMTEuNjk4IDU2LjYyMWMtLjczMiAzLjU0MiAzLjk3OSA1LjQ3MyA1Ljk0MyAyLjQzN2wxLjMxMy0yLjAyOGw3Mi41MTYtMTQ0LjcyYzEuMjE1LTIuNDIzLS44OC01LjE4Ni0zLjU0LTQuNjcybC0yNS41MDUgNC45MjJjLTIuMzk2LjQ2Mi00LjQzNS0xLjc3LTMuNzU5LTQuMTE0bDE2LjY0Ni01Ny43MDVjLjY3Ny0yLjM1LTEuMzctNC41ODMtMy43NjktNC4xMTMiLz48L3N2Zz4=" alt="add" class="add-item">
-				</div>
-			</div>
-	</section>
-
-
-
-	<footer>
-		<div class="container">
-			Code By NewArk81
-		</div>
-	</footer>
-	
-
-
-	<script src="assets/js/jquery-1.11.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/contact.js"></script>
-	<script src="assets/js/script.js"></script>
-
-
+    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
