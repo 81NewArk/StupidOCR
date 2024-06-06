@@ -21,6 +21,7 @@ description = """
 app = FastAPI(title="StupidOCR", description=description, version="1.0.8")
 app.mount("/assets", StaticFiles(directory="dist/assets"), name="assets")
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
