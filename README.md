@@ -62,9 +62,7 @@ _________________
 |  ----  | ----  |
 | B站  | https://space.bilibili.com/37887820 |
 
-# 在线要饭
 
-![](https://raw.githubusercontent.com/81NewArk/SD_install4CN/main/images/WeChat.png)     ![](https://raw.githubusercontent.com/81NewArk/SD_install4CN/main/images/ZFB.png)
 
 # Visitor Count
 <img src="https://badges.pufler.dev/visits/81NewArk/81NewArk">
