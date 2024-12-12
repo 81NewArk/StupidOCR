@@ -1,41 +1,66 @@
 # StupidOCR 
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=header&text=StupidOCR&fontSize=90&fontAlign=50&fontAlignY=30&desc=81NewArk&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" />
-</p>
+_________________
+```
+应用于爬虫，注册，登录等场景的验证码识别
+快速 便捷 通用的方法提供用户调用，堪称作者开发神器
+```
 
 
-<p align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=25&pause=1000&center=true&vCenter=true&random=false&width=600&lines=I+am+First+Deep+Love!;Next+Girl+Will+be+Better!" />
-</p>
+_________________
+## 项目说明：
 
-<p align="center">
-<img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=81NewArk&theme=transparent&show_icons=true&hide_border=true&show=reviews&hide_title=true&hide=contribs" />
-<br/>
-<img align="center" width="400" src="https://streak-stats.demolab.com/?user=81NewArk&theme=transparent&date_format=%5BY.%5Dn.j&hide_border=true" />
-</p>
-
-<br/>
-
-<p align="center">
-<img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=81NewArk&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Graph" />
-</p>
-<br/>
-<p align="center">
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=81NewArk&theme=transparent&hide_border=true&layout=donut-vertical&langs_count=6" />
-</p>
-<br/>
-<p align="center">
-<img align="center" src="https://skillicons.dev/icons?i=py,c,cpp,cs,java,vue,vite,js,md,&theme=light" />
-</p>
-<br/>
-
-<p align="center">
-<a href="https://github.com/81NewArk"><img src="https://img.shields.io/badge/GitHub-81NewArk-blue?logo=github" /></a>
-<a href="https://space.bilibili.com/37887820"><img src="https://img.shields.io/badge/BiliBili-NekArk81-pink?logo=bilibili" /></a>
-<img src="https://img.shields.io/badge/QQ-751247667-green?logo=tencentqq" />
-</p>
+>Python开发， 用于验证码识别，<strong>秉承着会HttpPost协议即可调用的原则！</strong>
+> 
+>支持部署 <strong>本地</strong> 和 <strong>服务器</strong> .
+> 
+> 内嵌开发者文档：http://127.0.0.1:6688/docs
+> 
+>成品长期维护，提供源代码，免费使用等特点
+## 更新内容：
+* 修复开发者文档部分BUG
 
 
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=footer&text=END&fontSize=90&fontAlign=50&fontAlignY=30&desc=退房之前我最爱你&descAlign=50&descSize=30&descAlignY=60&animation=twinkling" />
-</p>
+* 请求异步执行，实现并发
+
+
+* 通用型验证码识别
+
+
+* 算数验证码识别
+
+
+* 独立滑块验证码识别【返回坐标】
+
+
+* 缺口滑块验证码识别【返回坐标】
+
+
+* 文字点选验证码识别【返回坐标】
+
+
+## 常见问题和解决方法:
+> 
+>>1:服务器怎么部署？
+> 
+>打开6688端口，修改127.0.0.1为服务器ip地址即可
+>
+>>2.软件运行缺少DLL？
+> 
+> 补齐所缺DLL(项目用Python3.9环境 + Pyinstaller编译，部分win7服务器不能运行，提供源码自行编译)
+>
+_________________
+
+
+
+
+## 关于作者
+**NewArk81**
+
+|     | 地址  |
+|  ----  | ----  |
+| B站  | https://space.bilibili.com/37887820 |
+
+
+
+# Visitor Count
+<img src="https://badges.pufler.dev/visits/81NewArk/81NewArk">
